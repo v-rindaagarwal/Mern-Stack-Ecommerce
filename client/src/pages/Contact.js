@@ -7,27 +7,37 @@ const Contact = () => {
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/images/contactus.jpeg"
+            // eslint-disable-next-line no-octal-escape
+            src="C:\Users\brind\ReactProject\Mern-Stack-Ecommerce\Images\123.jpg"
             alt="contactus"
             style={{ width: "100%" }}
           />
         </div>
         <div className="col-md-4">
-          <h1 className="bg-dark p-2 text-white text-center">CONTACT US</h1>
-          <p className="text-justify mt-2">
-            any query and info about prodduct feel free to call anytime we 24X7
-            vaialible
-          </p>
-          <p className="mt-3">
-            <BiMailSend /> : www.help@ecommerceapp.com
-          </p>
-          <p className="mt-3">
-            <BiPhoneCall /> : 012-3456789
-          </p>
-          <p className="mt-3">
-            <BiSupport /> : 1800-0000-0000 (toll free)
-          </p>
-        </div>
+  <div className="card">
+    <div className="card-header bg-dark text-white text-center">
+      <h1 className="mb-0">CONTACT US</h1>
+    </div>
+    <div className="card-body">
+      <p className="card-text text-justify">
+        If you have any questions or need information about our products,
+        please don't hesitate to reach out to us. We are available 24/7 to assist you.
+      </p>
+      <ul className="list-unstyled">
+        <li className="mt-3">
+          <i className="bi bi-envelope"></i> Email: <a href="mailto:help@ecommerceapp.com">help@ecommerceapp.com</a>
+        </li>
+        <li className="mt-3">
+          <i className="bi bi-telephone"></i> Phone: <a href="tel:0123456789">012-3456789</a>
+        </li>
+        <li className="mt-3">
+          <i className="bi bi-headset"></i> Support: <a href="tel:18000000000">1800-0000-0000 (toll-free)</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
       </div>
     </Layout>
   );

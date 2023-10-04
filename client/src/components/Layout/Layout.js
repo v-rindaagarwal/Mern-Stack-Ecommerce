@@ -3,9 +3,10 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
 import { Toaster } from "react-hot-toast";
+
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div>
+    <div style={styles.container}>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
@@ -14,7 +15,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
-      <main style={{ minHeight: "70vh" }}>
+      <main style={styles.main}>
         <Toaster />
 
         {children}
@@ -25,10 +26,21 @@ const Layout = ({ children, title, description, keywords, author }) => {
 };
 
 Layout.defaultProps = {
-  title: "Ecommerce app - shop now",
-  description: "mern stack project",
-  keywords: "mern,react,node,mongodb",
+  title: "Ecommerce App - Shop Now",
+  description: "Your one-stop shop for everything!",
+  keywords: "e-commerce, shopping, online store",
   author: "Techinfoyt",
+};
+
+const styles = {
+  container: {
+    fontFamily: "Arial, sans-serif",
+  },
+  main: {
+    minHeight: "70vh",
+    padding: "20px",
+    backgroundColor: "#f8f8f8",
+  },
 };
 
 export default Layout;
